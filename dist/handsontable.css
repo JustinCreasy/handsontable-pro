@@ -21,7 +21,7 @@
  * UNINTERRUPTED OR ERROR FREE.
  * 
  * Version: 1.17.1
- * Release date: 14/03/2018 (built at 13/03/2018 17:07:31)
+ * Release date: 14/03/2018 (built at 13/03/2018 17:21:04)
  */
 /**
  * Fix for bootstrap styles
@@ -181,7 +181,47 @@
   white-space: pre-line;
   /* preserve new line character in cell */
   background-clip: padding-box;
+	
+	/*JENZABAR CUSTOM: */
+  word-wrap: break-word;
 }
+
+/*JENZABAR CUSTOM: start */
+.handsontable td.success {
+    border: 1px solid #007504 !important;
+    background-color: #def8df !important;
+    color: #000000;
+}
+
+.handsontable td.danger {
+    border: 1px solid #ba0000 !important;
+    background-color: #ffd5d5 !important;
+    color: #000000;
+}
+
+.handsontable td.caution {
+    border: 1px solid #965800 !important;
+    background-color: #FFEED2 !important;
+    color: #000000;
+}
+
+.handsontable td.danger2 {
+    border: 5px solid #ba0000 !important;
+    background-color: #F1F1F1 !important;
+    color: #000000;
+}
+
+.ht_clone_bottom tr:first-child td, .ht_clone_bottom_left_corner tr:first-child td/*, .ht_clone_bottom_left_corner tr:first-child th*/ {
+    border-top: 1px solid #000000 !important;
+    font-weight: bold;
+    color: #000;
+}
+
+.ht_clone_bottom_left_corner tr:first-child th {
+    border-top: 1px solid #000000 !important;
+    font-weight: bold;
+}
+/*JENZABAR CUSTOM: end */
 
 .handsontable td.htInvalid {
   background-color: #ff4c42 !important; /*gives priority over td.area selection background*/
@@ -234,12 +274,21 @@
   border-bottom-width: 0;
 }
 
-.handsontable th {
+/*.handsontable th {
   background-color: #f3f3f3;
   color: #222;
   text-align: center;
   font-weight: normal;
   white-space: nowrap;
+}*/
+
+.handsontable th {
+    /*JENZABAR CUSTOM: */
+    background-color: #F3F3F3;
+    color: #000000;
+    text-align: center;
+    font-weight: normal;
+    white-space: nowrap;
 }
 
 .handsontable thead th {
@@ -256,12 +305,19 @@
 /* selection */
 .handsontable tbody th.ht__highlight,
 .handsontable thead th.ht__highlight {
-  background-color: #dcdcdc;
+  /* JENZABAR CUSTOM: */
+  /*background-color: #dcdcdc;*/
+  background-color: #d2d6db;
 }
 .handsontable.ht__selection--columns thead th.ht__highlight,
 .handsontable.ht__selection--rows tbody th.ht__highlight {
   background-color: #8eb0e7;
   color: #000;
+}
+
+.handsontable td.highlight {
+    /* JENZABAR CUSTOM: */ 
+    background-color: #FFF;
 }
 
 #hot-display-license-info {
@@ -356,10 +412,20 @@
 .handsontable .wtBorder {
   position: absolute;
   font-size: 0;
+	/*JENZABAR CUSTOM:*/
+  background-color: rgba(82, 168,236,.8) !important;
 }
 .handsontable .wtBorder.hidden{
   display:none !important;
 }
+
+/*JENZABAR CUSTOM BEGIN:*/
+.handsontable .wtBorder.success {
+    position: absolute;
+    font-size: 0;
+    background-color: #007504 !important;
+}
+/*JENZABAR CUSTOM END*/
 
 .handsontable td.area,
 .handsontable td.area-1,
